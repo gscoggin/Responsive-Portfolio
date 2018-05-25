@@ -1,0 +1,99 @@
+
+
+
+
+/* Center website */
+
+
+/* Add padding BETWEEN each column (if you want) */
+
+.row {
+    margin: 0px;
+    width:960px;
+}
+
+.row,
+.row > .column {
+    padding: 5px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    flex: 50%;
+    width: 25%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+    
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.image {
+    width: 50%;
+    margin: 20px 0px 25px 40px;  
+}
+
+.image-label {
+    width: 50%;
+    position: relative;
+}
+
+
+.image-label a {
+    display: block;
+    position: absolute;
+    top: 133px;
+    z-index: 2;
+    text-align: center;
+    width: 50%;
+    font: 125%/200% 'Georgia', Times, Times New Roman, serif;
+    background-color: #4aaaa5;
+    color: #fff;
+    text-decoration: none;
+    margin: 0px 0px 0px 40px;
+}
+
+div.gallery {
+    margin: 0px;
+    float: left;
+}

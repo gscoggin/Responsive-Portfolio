@@ -1,61 +1,71 @@
+
 /*------The style for the header/nav starts here------*/
-header {
-    background-color: #ffffff;
-    border-bottom: 2px solid lightgrey;
-    margin: 0%;
-    padding: 0%;
-  }
-  /* Add a background color top navigation bar */
-  .topnav {
-    margin: 0px 0px 0px 150px;
-    width: 960px;
-    padding: 0px 0px 0px 0px;
-    background-color: #ffffff;
+
+p.title {
+	font: bold 135%/200% 'Georgia', Times, Times New Roman, serif;
+	display: block;
+	background-color: #4aaaa5;
+  padding:0.5em 1.25em;
+  margin: 0px 0px 0px 150px;
+	margin-bottom:0;
+	color:#fff;
+} 
+
+nav {
+  background-color: #ffffff;
+  padding:16px 0px 16px 0;
+  margin-bottom: 0;
+  color:#fff;
+  line-height: 2em;
+  border-bottom: 1px solid lightgrey;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 10px 0px 10px 0px;
+    padding: 0;
     overflow: hidden;
-  }
-  
-  /* Style the links in the top navigation bar */
-  .topnav a {
-    float: left;
-    color: #777777;
+    background-color: #ffffff;
+    line-height: 75%;
+}
+
+li {
+    float: right;
+    
+}
+
+a {
+  margin: 0px 15px 0px 0px;
+}
+
+
+li a {
+    display: block;
+    color: #666;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .full-extend {
-    display: block;
-    color: #ffffff;
-    margin:  0%;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-  background-color: #ddd;
-  color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    font-family: 'Georgia', Times, Times New Roman, serif;
+    padding: 0px 15px 0px 20px;
+  	margin-bottom:0;
+    margin-left:-1.25em;
+    border-left: 1px solid #777;
+    
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active { 
+    color: white;
     background-color: #4aaaa5;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: x-large;
-    line-height: 40px;
-  }
-  
-  /* Right-aligned section inside the top navigation */
-  .topnav-right {
-  float: right;
-  }
-  
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: block;
-  }
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
   
   /*-----The style for the body section starts here-----*/
   /*--Site universal tags--*/
@@ -69,11 +79,14 @@ header {
   h1 {
     font-family: 'Georgia', Times, Times New Roman, serif;
     color: #4aaaa5;
-    margin: 20px 10px 10px 40px;
-    padding: 35px 10px 25px 0px;
-    border-bottom: 2px solid lightgrey;
     font-size: x-large;
-    font-weight: bold;
+    font: bold 135%/200% 'Georgia', Times, Times New Roman, serif;
+	  display: block;
+    background-color: #ffffff;
+    margin: 0px 20px 0px 40px; 
+    line-height: 80px;
+    border-bottom: 1px solid lightgrey;
+    
   }
   
   /*--Site universal classes--*/
@@ -98,7 +111,7 @@ header {
   
   /*--About page css--*/
   .bio {
-    margin: 0px 40px 20px 40px;
+    margin: 10px 20px 25px 40px;
     padding: 0px 0px 0px 0px;
     border: 10px;
     font-size: 100%;
@@ -149,11 +162,12 @@ header {
     background-color: #ffffff;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     border: 0px;
-    margin: 0px 20px 25px 40px;
+    margin: 10px 20px 25px 40px;
     padding: 0px 0px 0px 0px;
   }
   
   /*------The style for the Footer starts here------*/
+
   .grayline {
     border-top: 5px solid #4aaaa5;
     height: 45px;
@@ -164,15 +178,58 @@ header {
     width: 100%;
     color: white;
     text-align: center;
-    vertical-align: bottom;
-  }
-  
-  .copyright {
-    vertical-align: bottom;
+    z-index: 10;
   }
 
 
 
-  @media (min-width: 30em) /*and (orientation: landscape) */ { 
-    background-color: blue;
-   }
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media screen and (max-width: 980px) {
+  .bio {
+  width: 400px;
+}
+  .box-white {
+  width:  500px;
+  }
+}
+
+/* 
+  ##Screen = w768px
+*/
+@media screen and (max-width: 768px) {
+ .bio {
+  width: 400px;
+ }
+ .box-white{
+   width: 500px
+ } 
+}
+
+/* 
+  ##Screen w640px
+*/
+@media screen and (max-width: 640px) {
+  .bio {
+    width: 300px;
+  }
+  .box-white{
+    width: 400px;
+    margin: 15px 30px 10px 65px; 
+  }
+  p.title {
+    text-align:center;
+    float: none;
+    margin: 0;
+  }
+  ul {
+    margin: 0px 125px 0px 0px;
+  }
+   ul li a {
+    align-content: center;
+    text-align: center;
+  }
+}
